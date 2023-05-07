@@ -1,0 +1,44 @@
+version: '3.8'
+services:
+  micro:
+    container_name: 'sistema'
+    build:
+      context: ./micro-sistema
+    restart: always
+
+    networks:
+      default:
+        ipv4_address: 10.5.0.10
+
+    ports:
+      - 4210:4210
+    volumes:
+      - .:/home/www/micro-sistema
+
+  gatway:
+    container_name: 'setup'
+    build:
+      context: ./gatway
+    restart: always
+
+    networks:
+      default:
+        ipv4_address: 10.5.0.9
+
+    ports:
+      - 4200:4200
+
+    volumes:
+      - .:/home/www/gatway
+      
+networks:
+  default:
+    external:
+      name: rede-interna
+# networks:
+#   rede-interna:
+#     driver: bridge
+#     ipam:
+#       driver: default
+#       config:
+#         - subnet: 10.5.0.0/16  

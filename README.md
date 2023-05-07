@@ -9,3 +9,6 @@ Sistema micro front-ends  com angular 15
 
 # Rodar sistema [micro-sistema] em modo de desenvolvimento:
 ## ng s micro-sistema
+
+# Rota para o consumo de recusros micro Front-End
+### /resource/shopping

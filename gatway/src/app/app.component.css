@@ -1,0 +1,17 @@
+.c-nav-card{
+  display: flex;
+  justify-content: center;
+  align-self: self-end;
+
+}
+.n-route{
+  color: #008000;
+  font-size: 27px;
+}
+
+a.n-route{
+  text-decoration: none;
+}
+a.n-route:hover{
+  color: #ff0000;
+}
